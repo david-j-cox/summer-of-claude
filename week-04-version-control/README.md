@@ -1,12 +1,11 @@
 # Week 4 - Version Control
-
 Goal for the week: learn git well enough to use it as a safety net. When the system
 edits your files, git is what lets you see exactly what changed, keep what works,
 and discard what does not. It is what makes it reasonable to let an agent change
-your project at all.
+your project at all. It also allows you to rewind to earlier versions if things
+break. 
 
 ## Why version control matters with an agent
-
 An agent can change many files in seconds. Without version control you cannot tell
 what it changed, and you cannot return to the version that worked. With it, every
 change is visible and reversible. Git replaces "I hope it did not break anything"
@@ -17,9 +16,7 @@ checkpoint that behaves the same way every time. The GenAI model proposes change
 git gives you reliable control over which of those changes you actually keep.
 
 ## The core ideas
-
 You do not need every git command. Five ideas cover most of the work:
-
 - commit: a saved checkpoint of your project at a point in time, with a short note
   about what changed.
 - diff: what changed between two points, shown as lines added and removed. You met
@@ -27,7 +24,7 @@ You do not need every git command. Five ideas cover most of the work:
 - branch: a parallel line of work, so you can try something risky without changing
   your known-good version.
 - revert / undo: returning to an earlier checkpoint when a change was wrong.
-- push / pull: sending your commits up to the shared repo, or bringing down updates
+- push / pull: sending your commits up to the shared repo in the cloud, or bringing down updates
   others made.
 
 ## Let the system run git and explain it

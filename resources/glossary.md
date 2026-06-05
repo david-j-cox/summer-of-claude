@@ -1,6 +1,6 @@
 # Glossary
 
-A running list of the jargon, in plain language. It grows every week - terms are
+A running list of the jargon, in plain language. It grows every week. Terms are
 grouped by the week they first show up, so you can always find where one was
 introduced. Week 3 is a dedicated pass back over all of it.
 
@@ -8,12 +8,12 @@ introduced. Week 3 is a dedicated pass back over all of it.
 
 - terminal (or PowerShell): the text window where you type commands to your
   computer; where these tools run.
-- agent: an AI tool that can take actions for you - read and write files, run
-  commands - not just reply with text.
+- agent: an AI tool that can take actions for you, such as reading and writing
+  files or running commands, not just replying with text.
 - model: the generative AI system (such as Claude or GPT) that produces the
   responses and chooses which tools to call. The agent is the software built around
   the model.
-- prompt: what you type to the agent - your instruction or question.
+- prompt: the instruction or question you type to the agent.
 - context: the information currently loaded for the system to use in this session
   (your prompts, the files it has read, its earlier replies). The space is limited,
   so older material eventually drops out.
@@ -24,19 +24,20 @@ introduced. Week 3 is a dedicated pass back over all of it.
 
 ## Week 2 - Driving the Loop
 
-- tool: a specific action the agent is allowed to take - reading a file, editing
-  a file, running a command, searching the web. The model decides which to use.
+- tool: a specific action the agent is allowed to take, such as reading a file,
+  editing a file, running a command, or searching the web. The model selects which
+  to use.
 - tool call: one use of a tool. When you watch the agent work, the steps scroll-
   ing by ("Read", "Edit", "Bash") are its tool calls.
-- diff: a before-and-after view of a file showing exactly what changed - lines
+- diff: a before-and-after view of a file showing exactly what changed, with lines
   added and removed. How you review an edit before accepting it.
 - output style: a setting that changes how the agent talks to you. Explanatory
   narrates its reasoning; Learning leaves pieces for you to write.
-- iterate / iteration: one round of the back-and-forth - you ask, it acts, you
-  review and correct, repeat. Most real work is many iterations, not one prompt.
+- iterate / iteration: one round of the back-and-forth: you ask, it acts, you
+  review and correct, then repeat. Most real work is many iterations, not one prompt.
 - session: one continuous conversation with the agent, from launch until you
   close it or clear it. Its context lives inside the session.
-- steering: redirecting the system while it works - telling it to change course,
+- steering: redirecting the system while it works, telling it to change course,
   stop, or try something different mid-task, rather than only at the start.
 
 ## Week 3 - Jargon

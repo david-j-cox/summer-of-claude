@@ -25,8 +25,8 @@ Do not look away while it works.
   run, what changed.
 - Claude Code: press Ctrl+O to open the full transcript and see every command
   and its complete output.
-- When it changes a file, it shows a diff - the before-and-after, with lines
-  added and removed. Read the diff before you accept it.
+- When it changes a file, it shows a diff: the before-and-after, with lines added
+  and removed. Read the diff before you accept it.
 
 Tool calls are deterministic software. Once you realize this, it's easier to see
 that the LLM does little work and is not that skilled. 
@@ -39,14 +39,14 @@ from run-to-run.
 You are not stuck with the first try. Tell it what is wrong and it will adjust.
 - "That is close, but the column is named `score`, not `Score`."
 - "Undo that last change and try a simpler approach."
-- "Stop - explain what you are about to do before you do it."
+- "Stop and explain what you are about to do before you do it."
 
 Steering mid-task is normal and expected. Each round is one iteration.
 
 ## Writing some of it yourself (Learning mode)
 If you want to start writing a little code yourself, try Learning mode. Instead
-of doing everything, the tool leaves a marked spot - `TODO(human)` - for you to
-fill in, then continues.
+of doing everything, the tool leaves a marked spot, `TODO(human)`, for you to fill
+in, then continues.
 - Claude Code: run `/config`, set Output style to Learning.
 - Either tool, in plain English: "Leave one small piece for me to write, and
   tell me what it needs to do."
@@ -75,7 +75,7 @@ skill.
 - output style: a setting for how the agent talks to you (Explanatory, Learning).
 - iterate / iteration: one round of ask -> act -> review -> correct.
 - session: one continuous conversation with the agent.
-- steering: redirecting the system while it works - telling it to change, stop, or
+- steering: redirecting the system while it works, telling it to change, stop, or
   try something different mid-task, not only at the start.
 
 Full running glossary: ../resources/glossary.md

@@ -64,7 +64,7 @@ the tool do it and teach you as it goes. Try something like:
 > folder."
 
 Then keep poking: ask where the files went, how to get updates later, and what a
-"commit" is. We go deeper on git in Week 4 - here you are just getting a feel for
+"commit" is. We go deeper on git in Week 4. Here you are just getting a feel for
 asking the tool to do real things and explain them.
 
 ## Your first task
@@ -90,12 +90,12 @@ This is the critical thinking skill set that will define future work.
 
 - terminal (or PowerShell): the text window where you type commands to your
   computer; where these tools run.
-- agent: an AI tool that can take actions for you - read and write files, run
-  commands - not just reply with text.
+- agent: an AI tool that can take actions for you, such as reading and writing
+  files or running commands, not just replying with text.
 - model: the generative AI system (such as Claude or GPT) that produces the
   responses and chooses which tools to call. The agent is the software built
   around the model.
-- prompt: what you type to the agent - your instruction or question.
+- prompt: the instruction or question you type to the agent.
 - context: the information currently loaded for the system to use in this session
   (your prompts, the files it has read, its earlier replies). The space is
   limited, so older material eventually drops out.

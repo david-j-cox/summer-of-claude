@@ -3,7 +3,7 @@
 Cross-week references, datasets, and supplemental reading.
 
 ## Available now
-- `glossary.md` - running glossary of all the jargon, grouped by the week each
+- `glossary.md`: running glossary of all the jargon, grouped by the week each
   term first appears. Grows every week; Week 3 is a full pass back over it.
 
 ## To collect
