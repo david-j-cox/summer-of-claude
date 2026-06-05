@@ -1,5 +1,4 @@
 # Week 6 - Skills: Teacher and Checker
-
 Goal for the week: stop relying on your memory for good practice. Write down the
 questions and steps you want followed every time, and have the system follow them.
 You do not need to know everything. You need to make sure the system is doing the
@@ -10,10 +9,8 @@ system teach you the project, and one that has the system check its own statisti
 before reporting them.
 
 ## Two ways to give standing instructions
-
 You met skills in Week 3 and used one in Week 4 (`git-workflow`). There are two
 related tools:
-
 - Instruction files (`CLAUDE.md`, `AGENTS.md`): always-on standing rules. The system
   loads them at the start of every session, so they apply to everything. Use them for
   facts and "always do X" rules. Keep them short, since they are always in context.
@@ -23,9 +20,7 @@ related tools:
 A rough split: a short rule goes in the instruction file; a procedure goes in a skill.
 
 ### Setting up the instruction files
-
 Copy the templates from `resources/templates/` into your project:
-
 - `AGENTS.md` holds the shared rules. Codex reads it automatically.
 - `CLAUDE.md` imports `AGENTS.md` (with the line `@AGENTS.md`) so Claude Code reads
   the same rules. Claude Code does not read `AGENTS.md` on its own, which is why the
@@ -35,7 +30,6 @@ Edit them to fit your project, then start a new session and confirm the system i
 following them.
 
 ## Skill 1: /explain (teacher mode)
-
 `skills/explain/` is a skill that turns the system into a tutor for whatever project
 you are in. It explains any file, function, or the overall structure at the depth you
 ask for, traces how data flows through the project, and quizzes you to check that it
@@ -48,8 +42,8 @@ paste the steps from `skills/explain/SKILL.md` into a session.
 Use it on this very repo, or on the analysis you built in Week 5.
 
 ## Skill 2: /check-assumptions (self-policing)
-
-`skills/check-assumptions/` is the spine skill of the course. Before the system
+`skills/check-assumptions/` is the most important skill in the course, and the one
+you will use most often. Before the system
 reports a statistical result, this skill makes it state the method's assumptions,
 check each one against the actual data, flag violations with evidence, name a better
 method when one is violated, and separate numbers it actually computed from anything

@@ -40,7 +40,8 @@ a session.
 
 ### check-assumptions (introduced Week 6)
 
-The spine skill of the course. Before the system reports a statistical result, it
+The most important skill in the course, and the one you will use most often. Before
+the system reports a statistical result, it
 states the method's assumptions, checks each against the data, flags violations with
 evidence, names a better method when one is violated, and separates numbers actually
 computed from anything merely asserted (a guard against confident but un-run results).
