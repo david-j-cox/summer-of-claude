@@ -1,0 +1,17 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editor/local
+.vscode/
+.idea/
+
+# Python (students will generate scripts/envs)
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Local Claude Code settings (keep shared config out of student clones)
+.claude/settings.local.json
