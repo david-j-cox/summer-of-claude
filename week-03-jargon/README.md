@@ -8,15 +8,11 @@ The vocabulary is also part of staying in control of the system and improving th
 accuracy of its output.
 
 ## How the pieces fit together
-
-Most of the terms describe one arrangement: a probabilistic generative AI model
-wrapped in deterministic software.
-
-- Generative AI model: the probabilistic part. It produces likely next words from
-  patterns in its training. It is flexible, but on its own it is not reliable. Run
-  the same prompt twice and you can get two different answers. (Note: "probabilistic"
-  applies to generative AI models like this one, not to models in general - plenty
-  of models are deterministic.)
+Most of the terms describe one arrangement: a probabilistic part wrapped in
+deterministic software.
+- GenAI Models: the probabilistic part. The LLM produces the likely next word from 
+  patterns in its training. It is flexible, but on its own it is not reliable. 
+  Run the same prompt twice and you can get two different answers.
 - Tools: deterministic software the model can call, such as read a file, run a
   command, or search. A tool does the same thing every time. This is the reliable
   part.
@@ -26,15 +22,13 @@ wrapped in deterministic software.
   software.
 - Agent: all of the above working together in the ask, act, review loop.
 
-This is the central idea of the course. The more of your work you move into
+This is the central idea of this Summer. The more of your work you move into
 deterministic software, such as a script, a test, or a skill the system writes for
 you, the less your results depend on a probabilistic guess and the more they become
-reproducible. The model proposes; the software is what you rely on.
+reproducible. The model proposes and helps you iterate; the software is what you rely on.
 
-## The rest of the vocabulary
-
+## Additional vocabulary
 What the model operates within:
-
 - context: the information currently loaded for the system to use, including your
   prompts, the files it has read, and its earlier replies.
 - context window: the limit on how much can be loaded at once. When it fills, older
@@ -42,7 +36,6 @@ What the model operates within:
   parts.
 
 Ways to extend or customize the harness:
-
 - skill: a saved set of instructions, sometimes with code, that has the system do a
   specific job the same way each time.
 - slash command: a shortcut starting with "/" that runs a skill or a built-in
@@ -60,26 +53,22 @@ You will not use all of these yet. MCP, hooks, and subagents return in Week 9. T
 are listed here so the full landscape is visible.
 
 ## Exercise: match each term to something you did
-
 For each term above, write one line naming where you already encountered it in Weeks
 1 and 2, for example "output style, when I turned on Explanatory" or "tool call,
 when it read my CSV." Any term you cannot place is one to ask the system about.
 
 ## Exercise: read real documentation
-
 Open the official documentation for your tool, or a forum thread about it, and read
 a few paragraphs. Mark the terms you are unsure of, then ask the system: "Explain
 each of these in plain language, using this repo as the example."
 
 ## Practice and self-check
-
 Have the system test your recall instead of only reading definitions: "Quiz me on
 this week's vocabulary one term at a time, tell me whether I am right, and correct
 me." Learning while you work is how you avoid deskilling, losing skills you had, and
 neverskilling, never building them in the first place.
 
 ## Words you met this week
-
 - harness: the software that connects the model to its tools and runs the loop;
   Claude Code and Codex are harnesses.
 - context window: the limit on how much information can be loaded at once.
