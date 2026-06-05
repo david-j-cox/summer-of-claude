@@ -102,3 +102,5 @@ This is the critical thinking skill set that will define future work.
   pull updates later.
 - repository (repo): a folder of project files tracked by git so changes can be
   shared and updated.
+
+Full running glossary: ../resources/glossary.md

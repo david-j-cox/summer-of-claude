@@ -1,14 +1,77 @@
 # Week 2 - Driving the Loop
 
-Status: outline only - to be built out.
+Goal for the week: get comfortable with the back-and-forth. You ask, the tool
+acts, you look at what it did, you correct it, and you repeat. That loop is the
+whole job. This week is about steering it well and starting to check the work.
 
-## Objectives
-- Give good instructions; iterate; correct the agent.
-- Read tool calls and diffs without looking away.
-- First trust reflex: "it says it works - how would you know?"
-- Use Learning mode's TODO(human) so students don't go passive.
+## 1. Give instructions it can actually follow
 
-## To build later
-- Annotated examples of good vs. vague prompts
-- "Watch the agent work" reading exercise
-- First validation checklist
+A vague ask gets a vague result. The more you say, the better it does. A good
+instruction usually has three parts:
+
+- What you want: "write a script that..."
+- Any context it needs: "...the data is in `data/survey.csv`, one row per
+  participant..."
+- What "done" looks like: "...it should print the mean of each numeric column
+  and save a cleaned copy."
+
+Try the same request once vague, once specific, and compare what you get. That
+contrast is the lesson.
+
+## 2. Watch what it actually does
+
+The tool does not just talk - it takes actions (reading files, editing them,
+running commands). Each of those is a tool call, and you can watch them happen.
+Do not look away while it works.
+
+- Read the steps as they scroll by: which file did it open, what command did it
+  run, what changed.
+- Claude Code: press Ctrl+O to open the full transcript and see every command
+  and its complete output.
+- When it changes a file, it shows a diff - the before-and-after, with lines
+  added and removed. Read the diff before you accept it.
+
+## 3. Correct it - it is a conversation
+
+You are not stuck with the first try. Tell it what is wrong and it will adjust.
+
+- "That is close, but the column is named `score`, not `Score`."
+- "Undo that last change and try a simpler approach."
+- "Stop - explain what you are about to do before you do it."
+
+Steering mid-task is normal and expected. Each round is one iteration.
+
+## 4. Optional: let it hand you the pen (Learning mode)
+
+If you want to start writing a little code yourself, try Learning mode. Instead
+of doing everything, the tool leaves a marked spot - `TODO(human)` - for you to
+fill in, then continues.
+
+- Claude Code: run `/config`, set Output style to Learning.
+- Either tool, in plain English: "Leave one small piece for me to write, and
+  tell me what it needs to do."
+
+Switch back to Explanatory any time a gap stops you cold. No pressure either way.
+
+## 5. The trust reflex: "it says it works - how would I know?"
+
+This is the habit we build all summer. When the tool reports success, do not
+take its word for it.
+
+- Run the thing yourself and read the actual output.
+- Ask: "What did you assume here? Where could this be wrong?"
+- Ask it to test its own work and show you the test and the result.
+
+Catching the tool being confidently wrong is a win, not a failure - it is the
+skill.
+
+## Words you met this week
+
+- tool: a specific action the agent can take (read a file, run a command).
+- tool call: one use of a tool; the steps you see scrolling as it works.
+- diff: a before-and-after view of a file showing exactly what changed.
+- output style: a setting for how the agent talks to you (Explanatory, Learning).
+- iterate / iteration: one round of ask -> act -> review -> correct.
+- session: one continuous conversation with the agent.
+
+Full running glossary: ../resources/glossary.md
