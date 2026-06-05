@@ -57,3 +57,18 @@ scripts you have it write) is what behaves the same every time and can be truste
   with its own context.
 - hook: a command set to run automatically at a certain moment (for example before
   or after an edit), so behavior happens without you asking each time.
+
+## Week 4 - Version Control
+
+Git is deterministic software (the Week 3 theme again): a commit is a fixed
+checkpoint that behaves the same forever. The system proposes changes; git gives
+you reliable control over which ones you keep.
+
+- commit: a saved checkpoint of your project at a moment in time, with a short
+  note about what changed.
+- branch: a parallel line of work, so you can try something risky without touching
+  your known-good version.
+- revert / undo: going back to an earlier checkpoint when a change was wrong.
+- push: sending your commits up to the shared repo (like the course repo).
+- pull: bringing down commits others have added.
+- merge: combining the work from one branch into another.
