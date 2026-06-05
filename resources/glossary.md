@@ -99,3 +99,7 @@ you reliable control over which ones you keep.
   uses randomness gives the same result every run.
 - reproducible: an analysis gives the same result when run again, because it is
   written down as a script and any randomness is pinned with a seed.
+- time series: measurements taken in order over time, such as per-minute response
+  counts within a session.
+- autocorrelation: when values in a series are related to nearby values (one minute
+  predicts the next). It breaks the assumption that observations are independent.

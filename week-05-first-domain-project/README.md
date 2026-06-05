@@ -13,6 +13,14 @@ participant. The structure is nested: sessions repeat within participants, and
 participants sit within clinics. That nesting matters for the analysis, and we come
 back to it below.
 
+There is also a finer-grained file, `resources/datasets/behavior_intervals.csv`,
+with one row per minute within each session. It adds a fourth level (minute within
+session within participant within clinic) and a within-session time series: the
+per-minute counts are related from one minute to the next. Start with the
+session-level file. If you want a harder version, or once you reach Week 8, switch to
+the interval file, where the extra level and the within-minute relationship give more
+to model and more assumptions to check.
+
 Point the system at the file and have it describe what is there before doing
 anything else:
 
