@@ -83,3 +83,19 @@ you reliable control over which ones you keep.
 - development / feature branch: a branch where you make and test changes before
   merging them into main. Use `development` for general work or `feature/<name>` for
   one specific change.
+
+## Week 5 - First Domain Project
+
+- nested (multilevel / hierarchical) data: observations grouped within larger units,
+  such as sessions within participants within clinics. The grouping means the rows
+  are not all independent of each other.
+- mixed-effects model (multilevel model): a model for nested data that includes both
+  fixed effects and random effects, so it respects the grouping.
+- fixed effect: an effect estimated as the same across the whole sample, such as the
+  average intervention effect.
+- random effect: variation allowed to differ by group, such as each participant or
+  clinic having its own level or trend.
+- seed: a fixed starting value for random number generation, so a procedure that
+  uses randomness gives the same result every run.
+- reproducible: an analysis gives the same result when run again, because it is
+  written down as a script and any randomness is pinned with a seed.

@@ -28,9 +28,7 @@ You do not need every git command. Five ideas cover most of the work:
   others made.
 
 ## Main and development branches
-
 Most projects keep two kinds of branches:
-
 - `main`: the version that always works. You do not edit it directly.
 - a development or feature branch: where you make and test changes.
 
@@ -57,9 +55,7 @@ Ask it to write the commit messages and explain why they are written the way the
 are. You are learning the concepts through use, not memorizing commands.
 
 ## Reviewing a diff
-
 Reading the diff before you commit is how you supervise an agent. Each time, ask:
-
 - Did it change only what I asked, or did it also touch things I did not mention?
 - Did anything get deleted that I wanted to keep?
 - Do I understand each change? If not, ask: "Explain this part of the diff and why
@@ -69,9 +65,7 @@ Accepting a diff you have not read is the same as accepting the output without
 checking it, which is the habit this course works to replace.
 
 ## Recovering from a bad change
-
 A short exercise that shows why git is worth the effort:
-
 1. Ask the system to commit your working project as a known-good checkpoint.
 2. Ask it to make a change that breaks something on purpose.
 3. Confirm it is broken by running it and seeing the failure.
@@ -81,7 +75,6 @@ Once you have recovered from a broken state yourself, letting an agent make larg
 changes carries less risk, because you can always return to a working version.
 
 ## A guardrail skill for git
-
 Remembering all of this every session is a lot to ask. You can instead hand the
 rules to the system once and have it apply them. In `skills/git-workflow/` there is
 a ready-made skill that tells the system to keep `main` stable, work on a branch,
@@ -100,13 +93,11 @@ not have to live in your memory. You can write them down once and have the syste
 apply them.
 
 ## If you are already comfortable with git
-
 Use this week to move into Learning mode (from Week 2) as your default, write your
 own commit messages, and resolve small merge conflicts yourself. Keep embedding the
 learning so the tools make you sharper rather than rustier.
 
 ## Words you met this week
-
 - commit: a saved checkpoint of the project, with a short note on what changed.
 - branch: a parallel line of work you can experiment on without risk to the main
   version.
