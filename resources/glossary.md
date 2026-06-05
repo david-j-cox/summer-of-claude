@@ -36,6 +36,8 @@ introduced. Week 3 is a dedicated pass back over all of it.
   review and correct, repeat. Most real work is many iterations, not one prompt.
 - session: one continuous conversation with the agent, from launch until you
   close it or clear it. Its context lives inside the session.
+- steering: redirecting the system while it works - telling it to change course,
+  stop, or try something different mid-task, rather than only at the start.
 
 ## Week 3 - Jargon
 

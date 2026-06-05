@@ -75,5 +75,7 @@ skill.
 - output style: a setting for how the agent talks to you (Explanatory, Learning).
 - iterate / iteration: one round of ask -> act -> review -> correct.
 - session: one continuous conversation with the agent.
+- steering: redirecting the system while it works - telling it to change, stop, or
+  try something different mid-task, not only at the start.
 
 Full running glossary: ../resources/glossary.md
