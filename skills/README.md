@@ -29,13 +29,26 @@ Use with Codex:
 Caveat: a skill is an instruction the system follows, not a hard lock. Keep
 reviewing the diffs. Week 9 covers hooks, which can enforce steps automatically.
 
+### explain (introduced Week 6)
+
+A read-only tutor for whatever project you are in. It explains any file, function, or
+the overall structure at the depth you ask for, traces how data flows through the
+project, and quizzes you to check understanding. Install by copying the `explain/`
+folder into `.claude/skills/` (or `~/.claude/skills/`), then run `/explain` or
+`/explain <file or topic>`. Codex users: paste the steps from `explain/SKILL.md` into
+a session.
+
+### check-assumptions (introduced Week 6)
+
+The spine skill of the course. Before the system reports a statistical result, it
+states the method's assumptions, checks each against the data, flags violations with
+evidence, names a better method when one is violated, and separates numbers actually
+computed from anything merely asserted (a guard against confident but un-run results).
+Install the same way and run `/check-assumptions` when about to report or interpret an
+analysis. Used heavily in Week 8.
+
 ## Planned
 
-- `/explain`: repo tutor that explains any file, function, or the architecture at a
-  chosen depth, traces data flow, and quizzes the student. (Week 6)
-- `/check-assumptions`: before reporting any statistical result, states the test's
-  assumptions, checks each against the data, flags violations, and suggests better
-  methods. (Week 6)
 - More added in Weeks 7-9.
 
 ## How to use

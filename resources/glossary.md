@@ -103,3 +103,13 @@ you reliable control over which ones you keep.
   counts within a session.
 - autocorrelation: when values in a series are related to nearby values (one minute
   predicts the next). It breaks the assumption that observations are independent.
+
+## Week 6 - Skills: Teacher and Checker
+
+- instruction file (`CLAUDE.md`, `AGENTS.md`): a file of standing rules the system
+  loads every session. Claude Code reads `CLAUDE.md`; Codex reads `AGENTS.md`. A
+  `CLAUDE.md` can import an `AGENTS.md` (with `@AGENTS.md`) so both tools share one
+  set of rules.
+- always-on vs on-demand: instruction files apply every session (always in context,
+  so keep them short); skills load only when used. Short rules go in the instruction
+  file, multi-step procedures go in a skill.
