@@ -27,8 +27,23 @@ You do not need every git command. Five ideas cover most of the work:
 - push / pull: sending your commits up to the shared repo in the cloud, or bringing down updates
   others made.
 
-## Let the system run git and explain it
+## Main and development branches
 
+Most projects keep two kinds of branches:
+
+- `main`: the version that always works. You do not edit it directly.
+- a development or feature branch: where you make and test changes.
+
+The practice is straightforward. Branch before you start non-trivial work, make
+your changes there, review them, and merge into `main` only once they work. Create
+one branch per feature or experiment so each change stays separate and easy to undo.
+For a quick one-line fix you might skip this; for anything you would be unhappy to
+lose, branch first.
+
+This is the safety net again: `main` stays clean while the system makes changes
+somewhere you can review or discard.
+
+## Let the system run git and explain it
 You learn git fastest by having the system run it and explain each step. From inside
 a project, try prompts like:
 
@@ -65,6 +80,25 @@ A short exercise that shows why git is worth the effort:
 Once you have recovered from a broken state yourself, letting an agent make larger
 changes carries less risk, because you can always return to a working version.
 
+## A guardrail skill for git
+
+Remembering all of this every session is a lot to ask. You can instead hand the
+rules to the system once and have it apply them. In `skills/git-workflow/` there is
+a ready-made skill that tells the system to keep `main` stable, work on a branch,
+checkpoint before risky changes, and show and explain every diff before committing.
+
+Install it by copying the `git-workflow` folder into `.claude/skills/` in your
+project (or `~/.claude/skills/` for all your projects), then run `/git-workflow`.
+Codex users: copy the steps from `skills/git-workflow/SKILL.md` into your project's
+`AGENTS.md`. See `skills/README.md` for full instructions.
+
+Two honest caveats. A skill is an instruction the system follows, not a hard lock.
+It makes good practice the default, but you should still watch the diffs. (Week 9
+covers hooks, which can enforce steps automatically.) And you will learn to write
+skills like this yourself in Week 6. The point for now is that best practices do
+not have to live in your memory. You can write them down once and have the system
+apply them.
+
 ## If you are already comfortable with git
 
 Use this week to move into Learning mode (from Week 2) as your default, write your
@@ -80,5 +114,9 @@ learning so the tools make you sharper rather than rustier.
 - push: sending your commits up to the shared repo.
 - pull: bringing down commits others have added.
 - merge: combining work from one branch into another.
+- main branch: the stable version of the project that always works; not edited
+  directly.
+- development / feature branch: a branch where you make and test changes before
+  merging them into main.
 
 Full running glossary: ../resources/glossary.md

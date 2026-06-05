@@ -78,3 +78,8 @@ you reliable control over which ones you keep.
 - push: sending your commits up to the shared repo (like the course repo).
 - pull: bringing down commits others have added.
 - merge: combining the work from one branch into another.
+- main branch: the stable version of the project that always works. You do not edit
+  it directly; changes are made on another branch and merged in once they work.
+- development / feature branch: a branch where you make and test changes before
+  merging them into main. Use `development` for general work or `feature/<name>` for
+  one specific change.
