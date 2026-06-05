@@ -38,15 +38,15 @@ introduced. Week 3 is a dedicated pass back over all of it.
 
 ## Week 3 - Jargon
 
-The mental model that ties these together: a probabilistic model wrapped in
-deterministic software. The model guesses; the software (tools, harness, the
-scripts you have it write) is what behaves the same every time and can be trusted.
+How these fit together: a probabilistic model wrapped in deterministic software.
+The model predicts likely text; the software (tools, harness, the scripts you have
+it write) does the same thing every run and can be relied on.
 
 - harness: the program that wraps the model and the tools together and runs the
   ask -> act -> review loop. Claude Code and Codex are harnesses. It is ordinary,
   deterministic software.
-- context window: the size limit on what the model can hold in mind at once. When
-  it fills up, older material is dropped or summarized - why long sessions "forget."
+- context window: the limit on how much can be loaded at once. When it fills, older
+  material is dropped or summarized, so a long session loses access to earlier parts.
 - MCP (Model Context Protocol): a standard way to plug outside tools and data
   sources (a database, a web service, your files) into the harness.
 - skill: a saved set of instructions (sometimes with code) that teaches the system
