@@ -35,3 +35,25 @@ introduced. Week 3 is a dedicated pass back over all of it.
   review and correct, repeat. Most real work is many iterations, not one prompt.
 - session: one continuous conversation with the agent, from launch until you
   close it or clear it. Its context lives inside the session.
+
+## Week 3 - Jargon
+
+The mental model that ties these together: a probabilistic model wrapped in
+deterministic software. The model guesses; the software (tools, harness, the
+scripts you have it write) is what behaves the same every time and can be trusted.
+
+- harness: the program that wraps the model and the tools together and runs the
+  ask -> act -> review loop. Claude Code and Codex are harnesses. It is ordinary,
+  deterministic software.
+- context window: the size limit on what the model can hold in mind at once. When
+  it fills up, older material is dropped or summarized - why long sessions "forget."
+- MCP (Model Context Protocol): a standard way to plug outside tools and data
+  sources (a database, a web service, your files) into the harness.
+- skill: a saved set of instructions (sometimes with code) that teaches the system
+  to do a specific job the same way every time, on demand.
+- slash command: a shortcut starting with "/" that triggers a skill or a built-in
+  action (such as `/config`).
+- subagent: a separate helper agent the main agent can spin up for a focused task,
+  with its own context.
+- hook: a command set to run automatically at a certain moment (for example before
+  or after an edit), so behavior happens without you asking each time.
