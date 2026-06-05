@@ -113,3 +113,17 @@ you reliable control over which ones you keep.
 - always-on vs on-demand: instruction files apply every session (always in context,
   so keep them short); skills load only when used. Short rules go in the instruction
   file, multi-step procedures go in a skill.
+
+## Week 7 - Testing
+
+- test: code that runs your code on a known input and checks the output is correct. It
+  passes or fails, and runs the same way every time.
+- unit test: a test of one small piece, such as a single function.
+- assertion: the line in a test that states what must be true (for example, the result
+  equals 4); the test fails if it is not.
+- edge case: an unusual or boundary input where errors often hide, such as missing
+  values, an empty group, or a single observation.
+- test-driven development (TDD): writing the test before the code, so the code is built
+  to meet a stated expectation rather than the test being fit to existing code.
+- regression test: a test kept around to confirm that something which once worked still
+  works after later changes.

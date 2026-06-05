@@ -42,20 +42,18 @@ paste the steps from `skills/explain/SKILL.md` into a session.
 Use it on this very repo, or on the analysis you built in Week 5.
 
 ## Skill 2: /check-assumptions (self-policing)
-`skills/check-assumptions/` is the most important skill in the course, and the one
-you will use most often. Before the system
-reports a statistical result, this skill makes it state the method's assumptions,
-check each one against the actual data, flag violations with evidence, name a better
-method when one is violated, and separate numbers it actually computed from anything
-it merely asserted. That last part matters: the system can produce a confident result
-it never actually ran (you raised this in Week 5). This skill makes it show the code
-and output behind every number.
+`skills/check-assumptions/` is, arguably, the most important skill and the one
+you will use most often. Before the system reports a statistical result, this skill 
+makes it state the method's assumptions, check each one against the actual data, 
+flag violations with evidence, name a better method when one is violated, and separate 
+numbers it actually computed from anything it merely asserted. That last part matters: 
+the system can produce a confident result it never actually ran (you raised this in 
+Week 5). This skill makes it show the code and output behind every number.
 
 Install it the same way and run `/check-assumptions` when you are about to report or
-interpret an analysis. You will lean on it heavily in Week 8.
+interpret an analysis. It will be very useful in Week 8.
 
 ## Exercise: write your own skill
-
 Pick one check or task you keep repeating and turn it into a skill. A skill is a
 folder with a `SKILL.md` file: a short description of when to use it, and the steps to
 follow. Copy `skills/check-assumptions/SKILL.md` as a starting shape, change the steps
@@ -63,7 +61,6 @@ to your task, and try it. Ask the system to help you write it, then read what it
 and make sure the steps are actually what you want.
 
 ## The idea to take with you
-
 `/explain` has the system teach you; `/check-assumptions` has the system check itself.
 Both are the same move: a question or procedure you care about, written down once so it
 happens every time instead of only when you remember. This is how you work with tools
@@ -71,7 +68,6 @@ you do not fully understand yet and still trust the output. You are not memorizi
 everything. You are making sure the right questions get asked.
 
 ## Words you met this week
-
 - instruction file (`CLAUDE.md`, `AGENTS.md`): a file of standing rules the system
   loads every session. `CLAUDE.md` is read by Claude Code; `AGENTS.md` is read by
   Codex; a `CLAUDE.md` can import `AGENTS.md` so both share one set of rules.

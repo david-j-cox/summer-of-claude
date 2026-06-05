@@ -48,9 +48,18 @@ computed from anything merely asserted (a guard against confident but un-run res
 Install the same way and run `/check-assumptions` when about to report or interpret an
 analysis. Used heavily in Week 8.
 
+### test-first (introduced Week 7)
+
+Enforces test-before-code so the system cannot write a bug and a test that blesses it
+in one go. It states the expected behavior, gets your confirmation, writes a test,
+runs it and shows it failing for the right reason, then implements until it passes,
+including an edge case. Install by copying the `test-first/` folder into
+`.claude/skills/` (or `~/.claude/skills/`), then run `/test-first`. Codex users: paste
+the steps from `test-first/SKILL.md` into a session.
+
 ## Planned
 
-- More added in Weeks 7-9.
+- More added in Weeks 8-9.
 
 ## How to use
 
