@@ -3,10 +3,10 @@
 Goal for the week: get a tool installed, talk to it, pull down the course files,
 and make it do one tiny useful thing. Explore as much as you want past that.
 
-## 0. Open a terminal
+## Open a terminal
 
 The terminal is just a text window where you type commands to your computer. It
-is also where these AI tools live. Open it once and leave it open.
+is also where these AI tools run. Open it once and leave it open.
 
 - Mac: press Cmd+Space, type `Terminal`, press Enter.
 - Windows: click Start, type `PowerShell`, press Enter.
@@ -14,7 +14,7 @@ is also where these AI tools live. Open it once and leave it open.
 
 Everything below is typed into this window.
 
-## 1. Install a tool
+## Install a tool
 
 I will be using Claude Code, but either is fine. Install one to get started, and
 feel free to try the other too.
@@ -30,7 +30,7 @@ not:
 - Windows: install from https://git-scm.com/download/win
 - Linux: `sudo apt install git` (or your distro's package manager)
 
-## 2. Sign in
+## Sign in
 
 Launch the tool and follow the login prompt.
 
@@ -39,7 +39,7 @@ Launch the tool and follow the login prompt.
 
 If it greets you and waits for your input, you are connected.
 
-## 3. Make it show its work, and explain itself
+## See what it does and have it explain
 
 You learn the most when you can see what the tool is doing and why. Do both of
 these:
@@ -53,7 +53,7 @@ these:
 
 You can turn this up or down whenever you like.
 
-## 4. Get the course files - by asking the tool
+## Get the course files
 
 You could type git commands yourself, but a more useful first exercise is to let
 the tool do it and teach you as it goes. Try something like:
@@ -67,7 +67,7 @@ Then keep poking: ask where the files went, how to get updates later, and what a
 "commit" is. We go deeper on git in Week 4 - here you are just getting a feel for
 asking the tool to do real things and explain them.
 
-## 5. Your first build
+## Your first task
 
 Ask the tool, in your own words, to do something small and real. For example:
 
@@ -77,7 +77,7 @@ Ask the tool, in your own words, to do something small and real. For example:
 
 Watch what it does. Read its explanation. Ask it "why?" at least once.
 
-## The trust habit starts now
+## Checking the output
 
 When it says "done" or "this works," ask yourself: how would I actually know?
 Run it. Look at the output. Ask it about the assumptions it made. Ask where it
@@ -92,12 +92,13 @@ This is the critical thinking skill set that will define future work.
   computer; where these tools run.
 - agent: an AI tool that can take actions for you - read and write files, run
   commands - not just reply with text.
-- model: the underlying AI "brain" (such as Claude or GPT) that does the
-  thinking. The agent is the tool built around the model.
+- model: the generative AI system (such as Claude or GPT) that produces the
+  responses and chooses which tools to call. The agent is the software built
+  around the model.
 - prompt: what you type to the agent - your instruction or question.
-- context: everything the agent is currently aware of in this session (your
-  prompts, files it has read, its earlier replies). It has limited room, so it
-  cannot remember everything forever.
+- context: the information currently loaded for the system to use in this session
+  (your prompts, the files it has read, its earlier replies). The space is
+  limited, so older material eventually drops out.
 - clone: making your own local copy of a shared project so you can use it and
   pull updates later.
 - repository (repo): a folder of project files tracked by git so changes can be

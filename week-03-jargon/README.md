@@ -9,12 +9,14 @@ accuracy of its output.
 
 ## How the pieces fit together
 
-Most of the terms describe one arrangement: a probabilistic part wrapped in
-deterministic software.
+Most of the terms describe one arrangement: a probabilistic generative AI model
+wrapped in deterministic software.
 
-- Model: the probabilistic part. It produces likely next words from patterns in its
-  training. It is flexible, but on its own it is not reliable. Run the same prompt
-  twice and you can get two different answers.
+- Generative AI model: the probabilistic part. It produces likely next words from
+  patterns in its training. It is flexible, but on its own it is not reliable. Run
+  the same prompt twice and you can get two different answers. (Note: "probabilistic"
+  applies to generative AI models like this one, not to models in general - plenty
+  of models are deterministic.)
 - Tools: deterministic software the model can call, such as read a file, run a
   command, or search. A tool does the same thing every time. This is the reliable
   part.

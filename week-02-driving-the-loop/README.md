@@ -5,7 +5,7 @@ acts, you look at what it did, you correct it, and you repeat. That loop is the
 whole job. One-shot prompts rarely work. This week is about steering it well 
 and starting to check the work.
 
-## 1. Give instructions the system can follow
+## Give instructions the system can follow
 A vague ask gets a vague result. The more you say, the better it does. A good
 instruction usually has three parts:
 - What you want: "write a script that..."
@@ -17,7 +17,7 @@ instruction usually has three parts:
 Try the same request once vague, once specific, and compare what you get. Describe
 the contrast. 
 
-## 2. Watch what it actually does
+## Watch what it does
 The tool does not just generate text. The system takes actions (reading files, editing them,
 running commands). Each of those is a tool call, and you can watch them happen.
 Do not look away while it works. 
@@ -35,7 +35,7 @@ Software is doing the work. And, you can have Claude build you the software so
 your output is deterministic and accurate and not probabilistic and change
 from run-to-run.  
 
-## 3. Correct it - it is a conversation
+## Correcting and steering
 You are not stuck with the first try. Tell it what is wrong and it will adjust.
 - "That is close, but the column is named `score`, not `Score`."
 - "Undo that last change and try a simpler approach."
@@ -43,7 +43,7 @@ You are not stuck with the first try. Tell it what is wrong and it will adjust.
 
 Steering mid-task is normal and expected. Each round is one iteration.
 
-## 4. Optional: let it hand you the pen (Learning mode)
+## Writing some of it yourself (Learning mode)
 If you want to start writing a little code yourself, try Learning mode. Instead
 of doing everything, the tool leaves a marked spot - `TODO(human)` - for you to
 fill in, then continues.
@@ -58,8 +58,8 @@ as much or as little as you'd like.
 Learning to embed learning in these interactions is the route to avoiding 
 deskilling and neverskilling. 
 
-## 5. The trust reflex: "it says it works - how would I know?"
-This is the critical skill we all need moving forward. When the tool reports 
+## Checking the work
+When the tool reports 
 success, do not take its word for it.
 - Run the thing yourself and read the actual output.
 - Ask: "What did you assume here? Where could this be wrong?"

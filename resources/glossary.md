@@ -10,12 +10,13 @@ introduced. Week 3 is a dedicated pass back over all of it.
   computer; where these tools run.
 - agent: an AI tool that can take actions for you - read and write files, run
   commands - not just reply with text.
-- model: the underlying AI "brain" (such as Claude or GPT) that does the
-  thinking. The agent is the tool built around the model.
+- model: the generative AI system (such as Claude or GPT) that produces the
+  responses and chooses which tools to call. The agent is the software built around
+  the model.
 - prompt: what you type to the agent - your instruction or question.
-- context: everything the agent is currently aware of in this session (your
-  prompts, files it has read, its earlier replies). It has limited room, so it
-  cannot remember everything forever.
+- context: the information currently loaded for the system to use in this session
+  (your prompts, the files it has read, its earlier replies). The space is limited,
+  so older material eventually drops out.
 - clone: making your own local copy of a shared project so you can use it and
   pull updates later.
 - repository (repo): a folder of project files tracked by git so changes can be
@@ -38,9 +39,11 @@ introduced. Week 3 is a dedicated pass back over all of it.
 
 ## Week 3 - Jargon
 
-How these fit together: a probabilistic model wrapped in deterministic software.
-The model predicts likely text; the software (tools, harness, the scripts you have
-it write) does the same thing every run and can be relied on.
+How these fit together: a probabilistic generative AI model wrapped in
+deterministic software. The model predicts likely text; the software (tools,
+harness, the scripts you have it write) does the same thing every run and can be
+relied on. ("Probabilistic" describes generative AI models specifically, not models
+in general.)
 
 - harness: the program that wraps the model and the tools together and runs the
   ask -> act -> review loop. Claude Code and Codex are harnesses. It is ordinary,
