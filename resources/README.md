@@ -3,8 +3,8 @@
 Cross-week references, datasets, and supplemental reading.
 
 ## Available now
-- `glossary.md`: running glossary of all the jargon, grouped by the week each
-  term first appears. Grows every week; Week 3 is a full pass back over it.
+- `glossary.md`: plain-language definitions of all the jargon used across the course,
+  in alphabetical order.
 - `datasets/behavior_sessions.csv` and `datasets/behavior_intervals.csv`: synthetic
   multilevel behavioral data used in Weeks 5 and 8. The sessions file has one
   row per session; the intervals file has one row per minute and adds a within-
