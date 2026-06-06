@@ -1,16 +1,12 @@
 # Week 8 - Validating Analysis
-
 Goal for the week: check whether an analysis can be trusted before you report it. The
 system can produce an analysis that looks complete and is written clearly but is still
 wrong. The work this week is to test it. You have the system question its own analysis,
-and you check the parts you can check yourself. If you are building an experiment
-rather than analyzing data, there is a section for that near the end.
+and you check the parts you can check yourself. 
 
 ## Three questions to answer first
-
 Before reporting an analysis, get answers to three questions:
-
-1. What are the method's assumptions, and does the data meet each one?
+1. What are the assumptions of the analytic method, and does the data meet each one?
 2. Is there a more appropriate method, and why was this one used instead?
 3. Where could the result be wrong: in the data, the code, or the analytic choices?
 
@@ -18,17 +14,16 @@ The `/check-assumptions` skill from Week 6 covers the first two. For the third, 
 week adds `/challenge-result`.
 
 ## Validate the Week 5 analysis
-
 Open the mixed-effects analysis from Week 5 and run `/check-assumptions` on it. For
 this model and dataset, the checks that matter most are:
-
 - Independence. The rows are not independent. Sessions repeat within participants, and
   participants sit within clinics. At the minute grain, the per-minute counts are
   autocorrelated by construction (see the data dictionary). Check whether the model
   accounts for this rather than assuming an independence it does not have.
 - Distribution. At the interval grain the outcome is a count, not a continuous
-  measure, so a model that assumes normal residuals is using the wrong distribution.
-  Ask whether a count model is more appropriate.
+  measure, so a model that assumes normally distributed residuals (the gaps between
+  each observed value and the value the model predicts) is using the wrong
+  distribution. Ask whether a count model is more appropriate.
 - Random-effects structure. Check that the grouping levels are actually in the model
   and not collapsed away.
 - Homogeneity and linearity, where the model assumes them.
@@ -100,6 +95,9 @@ once you tell it to.
 
 - statistical assumption: a condition a method requires to give valid results, such as
   independence or a particular distribution.
+- residual: the difference between an observed value and the value the model predicts
+  for it. Many methods make assumptions about the residuals, such as that they are
+  normally distributed.
 - independence: the assumption that observations do not depend on each other. Broken by
   repeated measures, nesting, and autocorrelation.
 - multiple comparisons: running many tests at once, which raises the chance of a false

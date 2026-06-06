@@ -132,6 +132,9 @@ you reliable control over which ones you keep.
 
 - statistical assumption: a condition a method requires to give valid results, such as
   independence of observations or a particular distribution.
+- residual: the difference between an observed value and the value the model predicts
+  for it. Many methods make assumptions about the residuals (for example, that they are
+  normally distributed).
 - independence: the assumption that observations do not depend on each other. Broken by
   repeated measures, nesting, and autocorrelation.
 - multiple comparisons: running many tests at once, which inflates the chance of a
