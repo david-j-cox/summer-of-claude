@@ -24,8 +24,7 @@ A subagent is a separate helper the main session can start for a focused task, w
 own context. It is useful when a job would otherwise fill up the main session, or when
 you want a fresh, independent pass.
 
-How to do it: just ask, in plain language. Tell the system to use a subagent for the
-task, for example:
+How to launch a subagent: just ask, in plain language. Tell the system to use a subagent for the task, for example:
 
 > "Use a subagent to run /challenge-result on this finding and report back only the
 > verdict."
@@ -36,7 +35,6 @@ subagent types as files in `.claude/agents/`; ask the system to set one up if yo
 a reusable one.
 
 ## Workflows
-
 A workflow is several steps chained into one run. Your analysis from Weeks 5 and 8 is
 already a sequence: load, clean, model, check assumptions, challenge the result. Once
 that sequence is stable, you can have the system run it end to end, or write it as a
@@ -44,29 +42,26 @@ skill that performs the steps in order. The value is consistency: the validation
 run as part of the pipeline instead of only when you remember them.
 
 ## Scheduled and background tasks
-
 Long jobs can run in the background while you do other things, and recurring jobs can
 run on a schedule (for example, re-running an analysis when the data file changes, or
 overnight). These are worth knowing about for large work. Start small and confirm the
 job does what you expect before you leave it running on its own.
 
 ## More automation, more validation
-
 This is the part to take seriously. Automating the work does not automate the trust.
 When a pipeline runs ten steps without stopping, it is easy to stop reading any of
 them, and a system that is confidently wrong is now wrong ten times without a pause.
 The fix is to build the checks into the automation, not to drop them:
-
 - Keep the validation steps (tests, `/check-assumptions`, `/challenge-result`) inside
   the pipeline, so scaling the work scales the checking too.
 - Use hooks to enforce the steps you cannot afford to skip.
 - Keep a human approving the things that matter, and have the automation report what it
   did so you can read it.
+- Use deterministic software as much possible. Don't have the LLM do the work. Have it  
+  write software that will do the same thing the same way, every time. 
 
 ## Where automation fits in research
-
 A rough rule. Automate the mechanical and the checking. Do not automate the judgment.
-
 - Good to automate: cleaning, plotting, running tests, running the validation skills,
   backing up data, rerunning an analysis when inputs change.
 - Keep under review: what a result means and whether to trust it, anything sent outside
@@ -76,7 +71,6 @@ A rough rule. Automate the mechanical and the checking. Do not automate the judg
   person in the loop.
 
 ## Words you met this week
-
 - hook: a command the tool runs automatically at a set point, every time, regardless of
   the model. Used to enforce a rule rather than only request it.
 - subagent: a separate helper the main session starts for a focused task, with its own

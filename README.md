@@ -18,7 +18,7 @@ To grab updates later: `git pull`.
 ## What's here
 
 - `Summer of Claude.docx`: the full syllabus (one-page overview of all 10 weeks).
-- `week-01` ... `week-10`: one folder per week with materials and exercises.
+- `week-01` ... `week-09`: one folder per week with materials and exercises.
 - `skills/`: take-home skills you can drop into your own projects.
 - `resources/`: shared datasets, references, and reading.
 

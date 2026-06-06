@@ -15,7 +15,7 @@ every row as independent. Within a session the per-minute counts also form a sho
 time series with autocorrelation (one minute is related to the next), so successive
 minutes are not independent either.
 
-Used in Weeks 5, 8, and 10. Regenerate any time with
+Used in Weeks 5 and 8. Regenerate any time with
 `python3 generate_behavior_sessions.py`.
 
 ## behavior_intervals.csv (finest grain: one row per minute)
