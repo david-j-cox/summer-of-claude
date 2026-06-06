@@ -67,10 +67,6 @@ threats survive. Install by copying the `challenge-result/` folder into
 `.claude/skills/` (or `~/.claude/skills/`), then run `/challenge-result`. Codex users:
 paste the steps from `challenge-result/SKILL.md` into a session.
 
-## Planned
-
-- More added in Week 9.
-
 ## How to use
 
 Each skill ships as a folder you drop into your own project (Claude Code) or adapt
