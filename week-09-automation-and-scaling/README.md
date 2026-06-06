@@ -20,13 +20,20 @@ every edit, log every command, or warn before risky actions. Pick the event, mat
 tool, run a command.
 
 ## Subagents
-
 A subagent is a separate helper the main session can start for a focused task, with its
 own context. It is useful when a job would otherwise fill up the main session, or when
-you want a fresh, independent pass. For example, have a subagent run `/challenge-result`
-on a finding while you keep working, or have one read through a large codebase and
-report back a summary. The main session stays focused, and the subagent does the
-narrow job.
+you want a fresh, independent pass.
+
+How to do it: just ask, in plain language. Tell the system to use a subagent for the
+task, for example:
+
+> "Use a subagent to run /challenge-result on this finding and report back only the
+> verdict."
+
+The subagent does the work in its own context and returns just its summary, so the
+details never enter the main session. In Claude Code you can also save your own
+subagent types as files in `.claude/agents/`; ask the system to set one up if you want
+a reusable one.
 
 ## Workflows
 
