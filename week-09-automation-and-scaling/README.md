@@ -1,13 +1,11 @@
 # Week 9 - Automation and Scaling
-
 Goal for the week: take the steps you now do by hand and have them run automatically,
-so they happen consistently and you can take on larger work. The catch is that
+so that they happen consistently and you can take on larger work. The catch is that
 automation hides the steps it runs, so the more you automate, the more deliberately you
 have to validate. This week covers the tools for automating, and where automating is
 and is not a good idea.
 
 ## From instructions to enforcement
-
 So far you have given the system standing instructions (the `CLAUDE.md` and `AGENTS.md`
 files) and on-demand skills. Both tell the system what to do, and it usually does. A
 hook is different. A hook is a command the tool runs automatically at a set point, and
@@ -17,8 +15,9 @@ always happen.
 `resources/templates/hooks/` has a working example: a hook that blocks any git commit
 made directly on `main`. The `git-workflow` skill from Week 4 asks for this; the hook
 requires it. Install it by following the README there. Hooks can also run your tests or
-a linter after every edit, log every command, or warn before risky actions. Pick the
-event, match the tool, run a command.
+a linter (a tool that automatically checks code for errors and style problems) after
+every edit, log every command, or warn before risky actions. Pick the event, match the
+tool, run a command.
 
 ## Subagents
 

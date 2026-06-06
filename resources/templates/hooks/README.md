@@ -46,7 +46,8 @@ instruction, which is followed but not enforced.
 
 ## A note on what hooks can do
 
-This is one small example. Hooks can also run a linter or your tests after each edit,
-log every command, or warn before risky actions. The pattern is the same: pick the
+This is one small example. Hooks can also run a linter (a tool that automatically
+checks code for errors and style problems) or your tests after each edit, log every
+command, or warn before risky actions. The pattern is the same: pick the
 event, match the tool, and run a command. Use hooks for the few things that must
 happen every time, and keep everything else as skills and instructions.

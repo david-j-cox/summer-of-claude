@@ -157,3 +157,5 @@ you reliable control over which ones you keep.
 - background task: a job that runs while you continue doing other things.
 - scheduled task: a job set to run on a timer or when something changes, such as a
   nightly rerun or a rerun when the data file is updated.
+- linter: a tool that automatically checks code for errors and style problems, so they
+  are caught early rather than at run time.
