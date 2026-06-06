@@ -146,3 +146,14 @@ you reliable control over which ones you keep.
 - confound: an alternative cause that could explain a result instead of the one being
   claimed.
 - overfitting: a result fit so closely to one sample that it does not hold on new data.
+
+## Week 9 - Automation and Scaling
+
+- hook: a command the tool runs automatically at a set point, every time, regardless
+  of the model. Used to enforce a rule rather than only request it (a skill or
+  instruction requests; a hook enforces).
+- workflow: several steps chained into one run, such as clean, model, then validate.
+  The value is that the checks run as part of the pipeline, not only when remembered.
+- background task: a job that runs while you continue doing other things.
+- scheduled task: a job set to run on a timer or when something changes, such as a
+  nightly rerun or a rerun when the data file is updated.

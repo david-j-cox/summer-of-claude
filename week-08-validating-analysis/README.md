@@ -29,34 +29,31 @@ this model and dataset, the checks that matter most are:
 - Homogeneity and linearity, where the model assumes them.
 
 Have the system run each check against the data and show the diagnostic, not just
-assert that everything is fine.
+assert that everything is fine. And, if you're not sure what some of the terms 
+above mean, just ask the system. 
 
 ## Recover the known values
-
 This dataset was generated from known values, listed in the data dictionary. That
 lets you check whether the analysis recovers them. Have the system compare its
 estimates against the true intervention effect, session trend, severity effect, and
-the clinic and participant variation. Real data will not give you this; synthetic data
-does, so use it while you can. If an analysis cannot recover values you already know,
-there is little reason to trust it on data where the values are unknown.
+the clinic and participant variation. 
+
+Importantly, real data will not give you this; synthetic data does, so use it while you can. If an analysis cannot recover values you already know, there is little reason to trust it on data where the values are unknown.
 
 ## Common problems to check for
-
 Ask the system about each of these by name, since it will not always raise them on its
 own:
-
 - Hallucinated methods or citations: a named test or reference that does not exist, or
   does not say what is claimed. Verify it.
 - Data leakage: information used in the analysis that would not be available in
   practice, which inflates the result.
 - Silent type coercion: a numeric column read as text, a category treated as a number,
-  dates parsed incorrectly. These change results with no error message.
+  dates parsed incorrectly. These change results without raising an error message.
 - Wrong defaults: a function default that does not match your design, left unchanged.
 - Multiple comparisons: many tests run, only the significant one reported, no
   correction applied.
 
 ## Challenge the result
-
 `/check-assumptions` works through a checklist. `/challenge-result`, added this week,
 does the opposite. It tries to show the result is wrong: it lists the ways the finding
 could be false, checks the ones that can be checked, and reports which problems remain.
@@ -66,19 +63,15 @@ Install it by copying the `challenge-result` folder into `.claude/skills/` (or
 `skills/challenge-result/SKILL.md` into a session.
 
 ## Reproducibility
-
 Confirm the analysis runs from a script, that any randomness is seeded, and that
 someone else could run it and get the same numbers. A result that worked once in a
 live session, through steps you cannot repeat, has not been validated.
 
 ## If you are building an experiment
-
 Validating an experiment is about whether it does what it claims and records what it
-should, not about statistical assumptions. The targets are:
-
+should. Here, the targets are:
 - Contingencies: feed the app a scripted sequence of responses and check the log to
-  confirm reinforcement was delivered exactly as the schedule specifies, rather than
-  judging it by eye.
+  confirm reinforcement was delivered exactly as the schedule specifies.
 - Recording: confirm every response and timestamp is saved, in the right format, with
   nothing dropped or double-counted.
 - Stress conditions: very fast responses, responses at schedule boundaries, and a
@@ -86,13 +79,11 @@ should, not about statistical assumptions. The targets are:
   responder before running a participant.
 
 ## A peer-review check
-
 As a last step, ask the system, and ask yourself, what a careful reviewer would
 object to first. Address that before reporting. Most of this is work the system can do
 once you tell it to.
 
 ## Words you met this week
-
 - statistical assumption: a condition a method requires to give valid results, such as
   independence or a particular distribution.
 - residual: the difference between an observed value and the value the model predicts

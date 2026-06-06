@@ -12,6 +12,11 @@ Cross-week references, datasets, and supplemental reading.
   and `datasets/generate_behavior_sessions.py` to regenerate both (standard library
   only, fixed seed).
 
+- `templates/AGENTS.md` and `templates/CLAUDE.md`: project instruction file templates
+  (Week 6). `CLAUDE.md` imports `AGENTS.md` so both tools share one set of rules.
+- `templates/hooks/`: a working example hook that blocks commits to `main` (Week 9),
+  with install instructions.
+
 ## To collect
 - Official docs links (Claude Code, Codex)
 - Recommended reading on reproducibility and statistical assumptions
