@@ -57,9 +57,19 @@ including an edge case. Install by copying the `test-first/` folder into
 `.claude/skills/` (or `~/.claude/skills/`), then run `/test-first`. Codex users: paste
 the steps from `test-first/SKILL.md` into a session.
 
+### challenge-result (introduced Week 8)
+
+Takes the opposite stance to `check-assumptions`: instead of a checklist, it tries to
+prove a result wrong. It lists the most likely ways a finding could be false
+(assumption violations, data leakage, type coercion, multiple comparisons, confounds,
+code errors, overfitting), checks the ones that can be checked, and reports which
+threats survive. Install by copying the `challenge-result/` folder into
+`.claude/skills/` (or `~/.claude/skills/`), then run `/challenge-result`. Codex users:
+paste the steps from `challenge-result/SKILL.md` into a session.
+
 ## Planned
 
-- More added in Weeks 8-9.
+- More added in Week 9.
 
 ## How to use
 

@@ -127,3 +127,19 @@ you reliable control over which ones you keep.
   to meet a stated expectation rather than the test being fit to existing code.
 - regression test: a test kept around to confirm that something which once worked still
   works after later changes.
+
+## Week 8 - Validating Analysis
+
+- statistical assumption: a condition a method requires to give valid results, such as
+  independence of observations or a particular distribution.
+- independence: the assumption that observations do not depend on each other. Broken by
+  repeated measures, nesting, and autocorrelation.
+- multiple comparisons: running many tests at once, which inflates the chance of a
+  false positive unless it is corrected for.
+- p-hacking: trying many analyses and reporting the one that reached significance,
+  whether on purpose or by accident.
+- data leakage: letting information into an analysis that would not be available in
+  real use, which makes the result look better than it really is.
+- confound: an alternative cause that could explain a result instead of the one being
+  claimed.
+- overfitting: a result fit so closely to one sample that it does not hold on new data.
