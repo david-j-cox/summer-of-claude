@@ -1,24 +1,22 @@
 # Week 7 - Testing
-
 Goal for the week: learn to test code, especially code you did not write. A test is
 how you check, automatically and repeatedly, that code does what you think it does.
-When the system writes the code, testing is most of how you earn the right to trust
-it.
 
 ## What a test is
-
 A test is code that runs your code on a known input and checks that the output is what
-it should be. It either passes or fails. Like git, a test is deterministic: it runs
+it should be. It either passes or fails. Like git, a test is deterministic. It runs
 the same way every time and gives you a clear answer, which is exactly what you want
-sitting underneath a system whose output varies.
+for a system whose output can vary probabilistically.
 
-A small example in words: "given a column of values `[2, 4, 6]`, the mean function
-should return `4`." A test states that expectation in code and checks it.
+For example, in words, a test might be something like: "given a column of values 
+`[2, 4, 6]`, the mean function should return `4`." A test states that expectation in code and checks it.
 
-## What to test in data work
+## What to test
+The same idea applies whether you are analyzing data or building an experiment, such
+as a human operant task. Test the pieces whose correct behavior you can state in
+advance.
 
-You are not testing a web app. You are testing analysis code. The useful targets:
-
+If you are analyzing data, useful targets are:
 - Cleaning and transformation functions: a known input should give a known output.
 - Edge cases: missing values, empty groups, a participant with one session, an
   impossible value, duplicates. These are where quiet errors hide.
@@ -26,6 +24,17 @@ You are not testing a web app. You are testing analysis code. The useful targets
   known values (see the data dictionary), so you can test that an analysis recovers
   the intervention effect within a tolerance. That is a real, meaningful test of an
   analysis, not just of a helper function.
+
+If you are building an experiment, such as a human operant task, useful targets are:
+- The contingency logic: a reinforcement schedule fires on the right response. An
+  FR-5 should reinforce on exactly every fifth response, not the fourth or sixth, and
+  an interval schedule should time correctly.
+- Trial and session flow: trials advance in the right order, the session starts and
+  ends on the right conditions, and the inter-trial interval behaves as specified.
+- Data recording: every response and its timestamp is logged, in the right format,
+  with nothing dropped or double-counted. A study is only as good as the data it saves.
+- Edge cases: very fast or double responses, a response right at a schedule boundary,
+  a participant who does nothing, and a session interrupted partway through.
 
 ## The trap: plausible code and plausible tests
 
@@ -59,6 +68,12 @@ Install it by copying the `test-first` folder into `.claude/skills/` (or
 > returns the mean target rate per condition. State the expected output for a small
 > example first, write the test, show it failing, then implement it."
 
+Or, for an experiment:
+
+> "Using a test-first approach: I am building an FR-5 reinforcement schedule. State
+> the expected behavior (reinforce on exactly every fifth response), write a test with
+> a normal case and an edge case, show it failing, then implement it."
+
 ## Reading code you did not write
 
 You cannot judge a test you cannot read. This is the week to slow down and read both
@@ -70,7 +85,9 @@ catch, it is not yet doing its job for you.
 
 This shows whether your tests are real.
 
-1. Have the system write a cleaning or summary function and tests for it, test-first.
+1. Have the system write a small function and tests for it, test-first. Use a data
+   summary if you are analyzing data, or a piece of your experiment such as a schedule
+   if you are building one.
 2. Confirm the tests pass.
 3. Now change the function so it is wrong on purpose (for example, drop the last row,
    or divide by the wrong count).
